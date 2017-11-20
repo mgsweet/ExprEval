@@ -1,12 +1,9 @@
 # 编译原理实验
 基于表达式的计算器 ExprEval
-**15331260 邱兆丰**
-
-[TOC]
 
 ## 实验内容
 ### 1 讨论语法定义的二义性
-![Alt text](./Screen Shot 2017-11-13 at 10.05.30 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-13%20at%2010.05.30%20PM.png)
 
 答：如图所示，显然这个语法存在二义性，因为对于 `1+1*1` 可以构造出两棵parsing tree。ExprEval可以使用OOP运算符优先文法处理表达式。
 
@@ -28,22 +25,22 @@ Sign := [,]
 
 #### 2.3 状态转换图
 ##### 2.3.1 无符号数字的状态转换图
-![Alt text](./Screen Shot 2017-11-17 at 4.48.02 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-17%20at%204.48.02%20PM.png)
 
 ##### 2.3.2 关系运算符的状态转换图
-![Alt text](./Screen Shot 2017-11-17 at 4.50.55 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-17%20at%204.50.55%20PM.png)
 
 ##### 2.3.3 关键字状态转换图
 其余关键字直接进行字符匹配，其状态转换图形式类比下图`min`的状态转换图。
-![Alt text](./Screen Shot 2017-11-17 at 4.53.11 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-17%20at%204.53.11%20PM.png)
 其他直接进行字母归类
 
 ### 3 构造算符优先关系表
 #### 3.1 建表根据
-![Alt text](./Screen Shot 2017-11-14 at 3.32.52 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-14%20at%203.32.52%20PM.png)
 
 #### 3.2 算符优先关系表
-![Alt text](./Screen Shot 2017-11-14 at 5.40.57 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-14%20at%205.40.57%20PM.png)
 
 **表格注释：**
 1. 右结合意味着该运算符遇到自身的时候是做shift操作。左结合则是reduce操作
@@ -54,25 +51,25 @@ Sign := [,]
 
 ### 4 设计并实现语法分析和语义处理程序
 #### 4.1 词法分析器与语法分析器之间的交互
-![Alt text](./Screen Shot 2017-11-15 at 11.11.08 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-15%20at%2011.11.08%20PM.png)
 
 #### 4.2 Operator Precedence Parser 工作原理图
-![Alt text](./Screen Shot 2017-11-17 at 11.46.31 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-17%20at%2011.46.31%20PM.png)
 
 #### 4.3 Parsing 算法参考
-![Alt text](./Screen Shot 2017-11-17 at 11.47.39 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-17%20at%2011.47.39%20PM.png)
 
 #### 4.4 UML图
-![Alt text](./UML.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/UML.png)
 *备注：大图请查看同文件夹的UML.png*
 
 
 ## 5 实验结果
 **simple测试：**
-![Alt text](./Screen Shot 2017-11-18 at 5.51.46 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-18%20at%205.51.46%20PM.png)
 
 **standard测试**
-![Alt text](./Screen Shot 2017-11-18 at 6.11.41 PM.png)
+![Alt text](https://raw.githubusercontent.com/mgsweet/ExprEval/master/Screen%20Shot%202017-11-18%20at%206.11.41%20PM.png)
 
 
 
